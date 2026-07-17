@@ -1,0 +1,131 @@
+.settings-view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settings-grid {
+  align-items: start;
+}
+
+.connection-panel {
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.connection-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.settings-action-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.test-conn-btn {
+  font-weight: 600;
+}
+
+.backup-section {
+  border-top: 1px solid var(--border-color);
+  padding-top: 24px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.backup-section h4 {
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.backup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.backup-actions button {
+  width: 100%;
+}
+
+/* Guide Steps layout */
+.guide-panel {
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.guide-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.step-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.step-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: var(--text-inverse);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.step-row p {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+.copy-code-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 4px 0 4px 44px;
+}
+
+.copy-code-btn {
+  width: max-content;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+}
+
+.code-block-preview {
+  background: var(--bg-app);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  font-size: 0.8rem;
+  font-family: var(--mono);
+  max-height: 150px;
+  overflow-y: auto;
+  color: var(--text-muted);
+  white-space: pre;
+}
+
+@media (max-width: 768px) {
+  .copy-code-container {
+    margin-left: 0;
+  }
+}

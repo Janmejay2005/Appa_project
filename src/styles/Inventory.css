@@ -1,0 +1,225 @@
+.inventory-view {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.controls-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  background: var(--bg-card);
+}
+
+.inventory-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.inventory-stats strong {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.table-panel {
+  background: var(--bg-card);
+  padding: 8px; /* Padding adjustment for borders */
+}
+
+/* Inline Price Editor Styling */
+.price-display-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+  width: max-content;
+}
+
+.price-display-wrapper:hover {
+  background: var(--border-color);
+}
+
+.price-text {
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.edit-trigger-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.price-display-wrapper:hover .edit-trigger-btn {
+  opacity: 1;
+}
+
+.inline-edit-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.currency-symbol {
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.inline-price-input {
+  width: 90px;
+  padding: 6px 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.edit-btn {
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.edit-btn.save-btn {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.edit-btn.save-btn:hover {
+  background: var(--success);
+  color: var(--text-inverse);
+}
+
+.edit-btn.cancel-btn {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.edit-btn.cancel-btn:hover {
+  background: var(--danger);
+  color: var(--text-inverse);
+}
+
+/* Actions Row columns */
+.row-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.action-icon-btn {
+  background: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--text-muted);
+  transition: var(--transition-fast);
+}
+
+.action-icon-btn:hover {
+  background: var(--border-color);
+  color: var(--text-main);
+}
+
+.action-icon-btn.delete-btn:hover {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+/* Modal Window Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeInEffect 0.2s ease-out;
+}
+
+.modal-content {
+  width: 90%;
+  max-width: 500px;
+  background: var(--bg-card);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  animation: modalScaleUp 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.15) forwards;
+}
+
+@keyframes modalScaleUp {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-close {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.modal-close:hover {
+  color: var(--danger);
+  transform: scale(1.05);
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .controls-panel {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .inventory-stats {
+    justify-content: space-between;
+  }
+}
