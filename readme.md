@@ -162,8 +162,6 @@ To enable cloud sync across multiple devices (Notion-like sync):
 
 Developed in collaboration by:
 - **Janmejay** (Frontend Engineering & Project Architecture)
-- **Omkar**
-- **Vansh**
 
 ---
 
