@@ -4,6 +4,7 @@ import {
   LayoutDashboard, 
   Calendar, 
   ClipboardList, 
+  BarChart3,
   Settings, 
   Sun, 
   Moon, 
@@ -31,7 +32,7 @@ const Layout = ({ activeView, setActiveView, children }) => {
     { id: "dashboard", label: "Dashboard", icon: LayoutDashboard },
     { id: "daily-entry", label: "Daily Entry", icon: Calendar },
     { id: "inventory", label: "Inventory List", icon: ClipboardList },
-    { id: "reports", label: "Reports & Costs", icon: Settings }, // Will change icon to BarChart in UI or Settings for configuration
+    { id: "reports", label: "Reports & Costs", icon: BarChart3 },
     { id: "settings", label: "App Settings", icon: Settings }
   ];
 

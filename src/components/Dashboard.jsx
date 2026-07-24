@@ -37,7 +37,7 @@ const Dashboard = ({ setActiveView, setSelectedEntryDate }) => {
 
   // Calculate monthly details
   const monthlySummary = calculateMonthlySummary(selectedMonth, dailyLogs, inventory);
-  const { totalRealizedBudget, totalCost, totalSavingOrExcess, averageCostPerHead } = monthlySummary;
+  const { totalRealizedBudget, totalCost, totalSavingOrExcess, averageCostPerHead, totalDiningStrength } = monthlySummary;
   
   // Calculate daily details for quick view date
   const dayLog = dailyLogs[quickViewDate];
